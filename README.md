@@ -29,19 +29,22 @@ To be clear, it's just sitting there, taking up space, it isn't actually running
 
 **Because it's so straightforward now, this has been converted into a single big script to allow people to run it automatically.**
 
-grab the migrate_jellyfin_12.zsh file, and edit the first section. READ it carefully to make sure your paths are set correctly. Then run. It will only do a dry-run first, no edits.
+## Semi-Automatic Instructions
 
-Step 1: install Jellyfin on your mac
-Step 1: shut down your docker stuff
-Step 3: copy all the docker files over to your mac
-Step 4: edit the script (section 1), then run the script to fix everything
-Step 5: run jellyfin, check for anything broken, and do a full library scan
+Grab the migrate_jellyfin_12.zsh file, and edit the first section. READ it carefully to make sure your paths are set correctly. Then run. It will only do a dry-run first, no edits.
 
-If anything is broken, just delete; your original docker jellyfin information should never be touched, so you can just go again easily.
+* Step 1: install Jellyfin on your mac
+* Step 1: shut down your docker stuff
+* Step 3: copy all the docker files over to your mac
+* Step 4: edit the script (section 1), then run the script to fix everything
+* Step 5: run jellyfin, check for anything broken, and do a full library scan
+
+If anything is broken, just delete it; your original docker jellyfin information should never be touched, so you can just go again easily.
 
 *This script is entirely AI created (first with ChatGTP, then fixed/updated by Claude), so back up everything first.*
 
-### AI Instructions
+## Manual Instructions
+*AI written from here on out*
 
 Two-phase migration: **Phase 1** moves a Jellyfin Docker container from one host (e.g. a NAS) to a Mac, still in Docker. **Phase 2** moves that Mac from Docker to the native Jellyfin Server app. This guide preserves the full library database, including custom/manually-added metadata that doesn't exist in an external provider (IMDb, TMDb, etc.), and covers every place absolute paths get baked in — not just the obvious ones.
 

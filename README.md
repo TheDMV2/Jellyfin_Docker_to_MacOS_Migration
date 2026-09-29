@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="/logo.jpg" alt="Logo">
+</p>
+
 # Migrating Jellyfin from Docker to the Native macOS App
 
 With lots of fantastic, cheap, fast, low-power Apple M1 computers coming up for sale on the secondhand market, more and more, they're looking like great mini servers. I picked one up, and wanted to move Jellyfin from my Synology NAS over to it. Running Docker on M1 MacOS is easy; I used OrbStack, which isn't great, but has a reasonable GUI, I guess. Honestly, I am *not* a fan.

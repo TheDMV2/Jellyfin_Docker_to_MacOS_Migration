@@ -2,7 +2,7 @@
   <img src="/logo.jpg" alt="Logo">
 </p>
 
-# Migrating Jellyfin from Docker to the Native macOS App
+# Migrating Jellyfin from Docker to the Native macOS App - Manual vs Semi-Automatic
 
 With lots of fantastic, cheap, fast, low-power Apple M1 computers coming up for sale on the secondhand market, more and more, they're looking like great mini servers. I picked one up, and wanted to move Jellyfin from my Synology NAS over to it. Running Docker on M1 MacOS is easy; I used OrbStack, which isn't great, but has a reasonable GUI, I guess. Honestly, I am *not* a fan.
 
@@ -23,11 +23,23 @@ Everytime I thought I'd fixed all the paths, I'd find another one. I got Claude 
 
 The only extra software you need is DB Browser for SQLite (https://sqlitebrowser.org/), a free SQL database editor.
 
-**Because it's so straightforward now, this will be converted into a single big script to allow people to run it automatically.**
-
 Note: I went docker to docker to native. There is no real reason for the middle step, I just wanted to make sure everything worked - and I already had Docker/Orbstack running on the M1 to handle/text a couple of the bigger more complex (poorly written/over-engineered) docker apps I was trying out. So, moving from computer 1 to 2 with docker was just a no brainer for me. Plus, if you're going to migrate more stuff over to your M1, like an 'arr stack, you're probably going to run docker on it anyway, so it's kind of a non-issue.
 
 To be clear, it's just sitting there, taking up space, it isn't actually running once I migrate over to the native app.
+
+**Because it's so straightforward now, this has been converted into a single big script to allow people to run it automatically.**
+
+grab the migrate_jellyfin_12.zsh file, and edit the first section. READ it carefully to make sure your paths are set correctly. Then run. It will only do a dry-run first, no edits.
+
+Step 1: install Jellyfin on your mac
+Step 1: shut down your docker stuff
+Step 3: copy all the docker files over to your mac
+Step 4: edit the script (section 1), then run the script to fix everything
+Step 5: run jellyfin, check for anything broken, and do a full library scan
+
+If anything is broken, just delete; your original docker jellyfin information should never be touched, so you can just go again easily.
+
+*This script is entirely AI created (first with ChatGTP, then fixed/updated by Claude), so back up everything first.*
 
 ###AI Instructions###
 

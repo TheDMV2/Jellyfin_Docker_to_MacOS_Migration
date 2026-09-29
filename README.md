@@ -41,7 +41,7 @@ If anything is broken, just delete; your original docker jellyfin information sh
 
 *This script is entirely AI created (first with ChatGTP, then fixed/updated by Claude), so back up everything first.*
 
-###AI Instructions###
+### AI Instructions
 
 Two-phase migration: **Phase 1** moves a Jellyfin Docker container from one host (e.g. a NAS) to a Mac, still in Docker. **Phase 2** moves that Mac from Docker to the native Jellyfin Server app. This guide preserves the full library database, including custom/manually-added metadata that doesn't exist in an external provider (IMDb, TMDb, etc.), and covers every place absolute paths get baked in — not just the obvious ones.
 

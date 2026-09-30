@@ -34,7 +34,7 @@ To be clear, it's just sitting there, taking up space, it isn't actually running
 Grab the migrate_jellyfin_12.zsh file, and edit the first section. READ it carefully to make sure your paths are set correctly. Then run. It will only do a dry-run first, no edits.
 
 * Step 1: install Jellyfin on your mac
-* Step 1: shut down your docker stuff
+* Step 2: shut down your docker stuff
 * Step 3: copy all the docker files over to your mac
 * Step 4: edit the script (section 1), then run the script to fix everything
 * Step 5: run jellyfin, check for anything broken, and do a full library scan
